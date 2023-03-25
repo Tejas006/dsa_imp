@@ -19,9 +19,8 @@ public:
     }
 
     int find(int x){
-        if(parent[x]==x)return x;
-
-        parent[x]=find(parent[x]);
+        if(parent[x]!=x)parent[x]=find(parent[x]);
+        return x;
     }
 
     void Union(int x, int y){
