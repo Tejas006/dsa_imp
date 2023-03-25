@@ -20,7 +20,7 @@ public:
 
     int find(int x){
         if(parent[x]!=x)parent[x]=find(parent[x]);
-        return x;
+        return parent[x];
     }
 
     void Union(int x, int y){
